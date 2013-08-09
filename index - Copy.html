@@ -29,7 +29,7 @@
 					
 				});
 				
-				$(document).ready(function(e, data){      
+				$(document).on('pagebeforeshow', '#this_page', function(e, data){      
     $.ajax({url: "topnews.json",
         dataType: "json",
         async: true,
@@ -50,22 +50,19 @@ var ajax = {
     parseJSON:function(result){
         $.each( result, function(i, row) {
         	
-            $('#news-data').append('<li><a data-role="button" data-transition="flow"  href="#headline'+i+'"><h3>' +row.title+ '</h3></a></li>');
+            $('#news-data').append('<li><a data-role="button"  href="#headline'+i+'"><h3>' +row.title+ '</h3></a></li>');
            
            
            var story_pages='<div data-role="page"  id="headline'+i+'"></div>';
            var story_header='<div data-role="header" data-theme="b"><a href="#menu-panel'+i+'" data-icon="grid" data-iconshadow="true" class="ui-btn-left" data-theme="b">Menu</a><h1><img src="images/logo.png" width="75%" /></h1></div>';
-           var story_content='<div class="story_img_cont"><img class="story_img" src="'+row.imagea+'" /></div><div class="news-title">'+row.title+'</div><div class="news-date">'+row.date+'</div><div>'+row.story+'</div>';
-          var story_nav='<div data-role="panel" id="menu-panel'+i+'" data-theme="a"></div>';
-          var story_container='<div data-role="content" id="story-container'+i+'"></div>'
+           var story_content='<div><img src="'+row.imagea+'" /></div><div>'+row.date+'</div><div>'+row.story+'</div>';
           $('body').append(story_pages); 
           $('#headline'+i).append(story_header);
-         $('#headline'+i).append(story_nav);
-         $('#menu-panel'+i).load('nav.html');
-         $('#headline'+i).append(story_container);
-          $('#story-container'+i).append(story_content);
-        
-        
+          
+          
+          
+          //$('#headline'+i).append('<div data-role="panel" id="menu-panel'+i+'" data-theme="a">'+$("#menu-panel").html()+'</div>');
+          $('#headline'+i).append(story_content);
         });
         $('#news-data').listview('refresh');
     }
@@ -75,15 +72,8 @@ var ajax = {
 				
 			</script>
 			<style type="text/css">
-			#news-data li h3.ui-li-heading { white-space:normal; font-size:small;}
-			.news-date{ font-size:small; font-weight:bold; color:#666;}
-			.news-title{ font-size:medium; font-weight:bold; color:#000;}
-			@media screen and (min-width: 960px){
-  #wrap {width: 100%; margin: 0 auto;}
-}
-@media screen and (max-width: 320px) {
-  #wrap {width: 100%;}
-}
+			
+			
 			</style>
 	</head>
 	<body>
@@ -97,7 +87,6 @@ var ajax = {
 			
 		<ul data-role="listview" data-theme="a">
 			<li class="list-menu" data-theme="a">Menu</li>
-			<li><a href="index.html">Home</a></li>
 			<li><a href="punjab.html">Punjab</a></li>
 			<li><a href="national.html">National</a></li>
 			<li><a href="international.html">International</a></li>
@@ -114,7 +103,7 @@ var ajax = {
 		
 		
 		<div data-role="content">
-            <ul data-role="listview"  id="news-data" data-theme="c">
+            <ul data-role="listview"  id="news-data" data-theme="a">
 
             </ul>
 	        
