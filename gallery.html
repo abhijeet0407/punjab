@@ -20,21 +20,12 @@
 
 $(document).ready(function(){
   $.mobile.allowCrossDomainPages = true;
-   $( document ).on( "swipeleft swiperight", "#this_page", function( e ) {
-             
-                    if ( e.type === "swipeleft"  ) {
-                        $( ".menu-panela" ).panel( "close" );
-                    } else if ( e.type === "swiperight" ) {
-                        $( ".menu-panela" ).panel( "open" );
-                    }
-              
-            });
 $.mobile.showPageLoadingMsg("a","Loading",true);
 
 	
  
 
-					   		$.ajax({url: "http://www.punjabnewsline.com/topnews.json",
+					   		$.ajax({url: "http://www.punjabnewsline.com/gallery.json",
 					        dataType: "json",
 					        async: true,
 					        success: function (result) {
@@ -56,22 +47,9 @@ var ajax = {
 	 parseJSON:function(result){
 	    $.each( result, function(i, row) {
        
-            $('#news-data').append('<li><a data-role="button" data-transition="flow"  href="#headline'+i+'"><h3>' +row.title+ '</h3></a></li>');
+            $('.gallery-img').append('<li><a data-role="button" data-transition="flow"  href="#headline'+i+'"><h3><img src='+row.imagea+' /></h3></a></li>');
           
-           
-           var story_pages='<div data-role="page" class="news-details"  id="headline'+i+'"></div>';
-           var story_header='<div data-role="header" data-theme="b"  data-position="fixed"><a href="#menu-panel'+i+'" data-icon="grid" data-iconshadow="true" class="ui-btn-left" data-theme="b">Menu</a><h1><img src="images/logo.png" width="75%" /></h1></div>';
-           var story_content='<div class="news-title">'+row.title+'</div><div class="story_img_cont"><img class="story_img" src="'+row.imagea+'"  /></div><div class="news-date">'+row.date+'</div><div class="story-style">'+row.story+'</div>';
-          var story_nav='<div data-role="panel" class="menu-panela" id="menu-panel'+i+'" data-theme="a"></div>';
           
-          var story_container='<div data-role="content" id="story-container'+i+'"></div>'
-          $('body').append(story_pages); 
-          $('#headline'+i).append(story_header);
-         $('#headline'+i).append(story_nav);
-         $('#menu-panel'+i).load('nav.html');
-         $('#headline'+i).append(story_container);
-          $('#story-container'+i).append(story_content);
-        
         
         });
         $.mobile.hidePageLoadingMsg();
@@ -112,7 +90,7 @@ var ajax = {
 		
 		
 		<div data-role="content">
-            <ul data-role="listview"  id="news-data" data-theme="c">
+            <ul class="gallery-img"  data-theme="c">
 
             </ul>
 	        

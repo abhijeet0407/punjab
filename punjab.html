@@ -20,21 +20,12 @@
 
 $(document).ready(function(){
   $.mobile.allowCrossDomainPages = true;
-   $( document ).on( "swipeleft swiperight", "#this_page", function( e ) {
-             
-                    if ( e.type === "swipeleft"  ) {
-                        $( ".menu-panela" ).panel( "close" );
-                    } else if ( e.type === "swiperight" ) {
-                        $( ".menu-panela" ).panel( "open" );
-                    }
-              
-            });
 $.mobile.showPageLoadingMsg("a","Loading",true);
 
 	
  
 
-					   		$.ajax({url: "http://www.punjabnewsline.com/topnews.json",
+					   		$.ajax({url: "http://www.punjabnewsline.com/punjab.json",
 					        dataType: "json",
 					        async: true,
 					        success: function (result) {
