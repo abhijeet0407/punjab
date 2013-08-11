@@ -3,7 +3,7 @@
 }
 #news-data li h3.ui-li-heading { white-space:normal; font-size:small;}
 			.news-date{ font-size:x-small; font-weight:bold; color:#666;}
-			.news-title{ font-size:large; font-weight:bold; color:#069;}
+			.news-title{ font-size:large; font-weight:bold; color:#069; padding-top:5px;}
 			.story-style{ text-align:justify; font-size:small}
 			.MsoNormal{ text-align:justify; font-size:small}
 			.gallery-img{ list-style:none; list-style-type:none; padding:0px;}
@@ -15,6 +15,9 @@
 			.menu-panela{ background-color:#333333  !important; background-image:none !important;}
 			.ui-btn-left{background-color: transparent !important;
 box-shadow: none  !important; width:20%; height:77%}
+.subheader{ border-bottom:1px solid #333333;}
+.type-news{ width:50%; float:left; font-weight:bold;}
+.pointers(width:50%; float right;)
 			@media screen and (min-width: 960px){
   .story_img_cont {width: 100%;}
   .story_img_cont img{width: 100%;}

@@ -55,7 +55,10 @@ var ajax = {
            
            var story_pages='<div data-role="page" class="news-details"  id="headline'+i+'"></div>';
            var story_header='<div data-role="header" data-theme="a"  data-position="fixed"><a href="#menu-panel'+i+'" class="ui-btn-left" data-role="none" ><img src="images/menu.png" /></a><h1 style=" white-space:normal; font-size: 12px;">PUNJAB NEWSLINE</h1></div>';
-           var story_content='<div class="news-title">'+row.title+'</div><div class="story_img_cont"><img class="story_img" src="'+row.imagea+'"  /></div><div class="news-date">'+row.date+'</div><div class="story-style">'+row.story+'</div>';
+          
+		   var story_content='<div class="subheader"><div class="type-news">Top News</div><div align="right" class="pointers"><a href="#headline'+ String(i-1)+'"' +
+    '         class="prevButton"><img src="images/prev.png" /></a>  ' +
+    String(i+1)+'/'+result.length+'      <a href="#headline'+String(i+1)+'"  class="nextButton" ><img src="images/next.png" /></a></div></div><div class="news-title">'+row.title+'</div><div class="story_img_cont"><img class="story_img" src="'+row.imagea+'"  /></div><div class="news-date">'+row.date+'</div><div class="story-style">'+row.story+'</div>';
           var story_nav='<div data-role="panel" class="menu-panela" id="menu-panel'+i+'" data-theme="a"></div>';
           
           var story_container='<div data-role="content" id="story-container'+i+'"></div>'
