@@ -50,11 +50,11 @@ var ajax = {
 	 parseJSON:function(result){
 	    $.each( result, function(i, row) {
        
-            $('#news-data').append('<li><a data-role="button"  href="#headline'+i+'"><h3>' +row.title+ '</h3></a></li>');
+            $('#news-data').append('<li data-icon="false"><a data-role="button"  href="#headline'+i+'"><h3 class="small-title">' +row.title+ '</h3><span class="small-img"><img src="'+row.imagea+'" /></span></a></li>');
           
            
            var story_pages='<div data-role="page" class="news-details"  id="headline'+i+'"></div>';
-           var story_header='<div data-role="header" data-theme="a"  data-position="fixed"><a href="#menu-panel'+i+'" class="ui-btn-left" data-role="none" ><img src="images/menu.png" /></a><h1 style=" white-space:normal; font-size: 12px;">PUNJAB NEWSLINE</h1></div>';
+           var story_header='<div data-role="header" data-theme="a"  data-position="fixed"><a href="#menu-panel'+i+'" class="ui-btn-left" data-role="button" ><img src="images/menu.png" /></a><h1 style=" white-space:normal; font-size: 12px;">PUNJAB NEWSLINE</h1></div>';
            var story_content='<div class="news-title">'+row.title+'</div><div class="story_img_cont"><img class="story_img" src="'+row.imagea+'"  /></div><div class="news-date">'+row.date+'</div><div class="story-style">'+row.story+'</div>';
           var story_nav='<div data-role="panel" class="menu-panela" id="menu-panel'+i+'" data-theme="a"></div>';
           
@@ -81,7 +81,7 @@ var ajax = {
 	<body>
 	<div data-role="page" id="this_page">
 		<div data-role='header' data-theme='a' data-position="fixed">
-			<a href="#menu-panel" class="ui-btn-left" data-role="none" ><img src="images/menu.png" /></a>
+			<a href="#menu-panel" class="ui-btn-left" data-role="none"  ><img src="images/menu.png" /></a>
 			<h1 style=" white-space:normal; font-size: 12px;">PUNJAB NEWSLINE</h1>
 		</div>
 		
