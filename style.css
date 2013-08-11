@@ -3,7 +3,11 @@
 			.news-title{ font-size:large; font-weight:bold; color:#069;}
 			.story-style{ text-align:justify; font-size:small}
 			.MsoNormal{ text-align:justify; font-size:small}
-			.gallery-img{ list-style:none; list-style-type:none;}
+			.gallery-img{ list-style:none; list-style-type:none; padding:0px;}
+			.ui-header .ui-btn-left{ left:12px; top:8px;}
+			#menu-panel .ui-li{ border-width:0; border-top-width: 0px; border-bottom-width:1px; border-bottom-color: #1e1e1e;}
+			.menu-text{ color:#006699;}
+			.menu-panela{ background-color:#333333  !important; background-image:none !important;}
 			@media screen and (min-width: 960px){
   .story_img_cont {width: 100%;}
   .story_img_cont img{width: 100%;}

@@ -47,7 +47,7 @@ var ajax = {
 	 parseJSON:function(result){
 	    $.each( result, function(i, row) {
        
-            $('#news-data').append('<li><a data-role="button" data-transition="flow"  href="#headline'+i+'"><h3>' +row.title+ '</h3></a></li>');
+            $('#news-data').append('<li><a data-role="button"   href="#headline'+i+'"><h3>' +row.title+ '</h3></a></li>');
           
            
            var story_pages='<div data-role="page" class="news-details"  id="headline'+i+'"></div>';
