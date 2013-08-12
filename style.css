@@ -9,15 +9,24 @@
 			.gallery-img{ list-style:none; list-style-type:none; padding:0px;}
 			.small-title{ width: 65%; float:left;}
 			.small-img img{ width:30%; float:right;}
-			.ui-header .ui-btn-left{ left:12px; top:8px;}
+			.ui-header .ui-btn-left{ left:12px; top:5px;}
 			#menu-panel .ui-li{ border-width:0; border-top-width: 0px; border-bottom-width:1px; border-bottom-color: #1e1e1e;}
 			.menu-text{ color:#006699;}
 			.menu-panela{ background-color:#333333  !important; background-image:none !important;}
-			.ui-btn-left{background-color: transparent !important;
-box-shadow: none  !important; width:20%; height:77%}
+			
 .subheader{ border-bottom:1px solid #333333;}
-.type-news{ width:50%; float:left; font-weight:bold;}
+.type-news{ width:70%; float:left; font-weight:bold;}
 .pointers(width:50%; float right;)
+.ui-icon-myapp-email {
+	background-image: url("images/menu.png");
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.ui-icon-myapp-email {
+		background-image: url("images/menu.png");
+		background-size: 18px 18px;
+	}
+
+}
 			@media screen and (min-width: 960px){
   .story_img_cont {width: 100%;}
   .story_img_cont img{width: 100%;}
