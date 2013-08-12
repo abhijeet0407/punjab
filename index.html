@@ -50,7 +50,7 @@ var ajax = {
 	 parseJSON:function(result){
 	    $.each( result, function(i, row) {
        
-            $('#news-data').append('<li data-icon="false"><a data-role="button"  href="#headline'+i+'"><h3 class="small-title">' +row.title+ '</h3><span class="small-img"><img src="'+row.imagea+'" /></span></a></li>');
+            $('#news-data').append('<li data-icon="false"><a data-role="button"  href="#headline'+i+'" data-transition="none"><h3 class="small-title">' +row.title+ '</h3><span class="small-img"><img src="'+row.imagea+'" /></span></a></li>');
           
            
            var story_pages='<div data-role="page" class="news-details"  id="headline'+i+'"></div>';
