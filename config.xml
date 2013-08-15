@@ -92,7 +92,7 @@
     <preference name="disable-cursor" value="false" />
         
     <!-- PHONEGAP API FEATURES PREFERENCES -->
-        <gap:plugin name="com.adobe.plugins.pushplugin" />
+        
     <preference name="permissions" value="none"/>
 
 </widget>
