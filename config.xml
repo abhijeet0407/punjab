@@ -37,7 +37,7 @@
         
     <icon src="img/icons/webos/icon.png" gap:platform="webos" /> <!-- 29 pixels -->
     <icon src="img/icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" /> <!-- 15 pixels -->
-        
+    <gap:plugin name="com.adobe.plugins.pushplugin" />    
     <!-- SPLASH SCREENS -->
         
     <gap:splash src="splash.png" /> <!-- default 320x480 pixels -->
