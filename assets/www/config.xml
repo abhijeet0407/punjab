@@ -39,7 +39,7 @@
     <icon src="img/icons/webos/miniicon.png" gap:platform="webos" gap:role="mini" /> <!-- 15 pixels -->
        
     <!-- SPLASH SCREENS -->
-        
+    <gap:plugin name="com.adobe.plugins.pushplugin" />
     <gap:splash src="splash.png" /> <!-- default 320x480 pixels -->
         
     <gap:splash src="img/splash/ios/splash320x480.png" gap:platform="ios" width="320" height="480" /> <!-- iPhone 3G, 3GS, iPod Touch 2, 3 -->
