@@ -60,7 +60,7 @@
     <gap:splash src="img/splash/winphone/splash.jpg" gap:platform="winphone" /> <!-- Windows Phone 7 480x800 -->
         
     <gap:splash src="img/splash/webos/splash.png" gap:platform="webos" /> <!-- WebOS 64x64 -->
-        
+<gap:plugin name="com.adobe.plugins.pushplugin" />        
     <!-- GENERAL PREFERENCES -->
         
     <preference name="phonegap-version" value="2.9.0" />
